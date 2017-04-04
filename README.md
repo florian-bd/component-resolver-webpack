@@ -1,3 +1,6 @@
+#Fork
+this fork ensures that the components returned have the same case than on the file system
+
 # component-resolver-webpack
 [![Build Status](https://travis-ci.org/toptal/component-resolver-webpack.svg?branch=master)](https://travis-ci.org/toptal/component-resolver-webpack) [![Build status](https://ci.appveyor.com/api/projects/status/qmvi3h6lk0xu8833?svg=true)](https://ci.appveyor.com/project/kossnocorp/component-resolver-webpack)
 

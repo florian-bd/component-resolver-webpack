@@ -1,17 +1,17 @@
 {
-  "name": "component-resolver-webpack",
-  "version": "0.4.0",
+  "name": "component-resolver-case-sensitive-webpack",
+  "version": "0.1.0",
   "description": "Webpack plugin that simplifies process of components loading",
   "main": "src/resolver.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kossnocorp/component-resolver-webpack"
+    "url": "https://github.com/florian-bd/component-resolver-webpack"
   },
   "keywords": [
     "webpack",
     "react"
   ],
-  "author": "Sasha Koss <sasha@toptal.com>",
+  "author": "Florian Bernard",
   "license": "MIT",
   "peerDependencies": {
     "webpack": "1.x"
@@ -25,5 +25,8 @@
   "scripts": {
     "test": "mocha \"./**/__tests__/*.js\" --require \"./src/__tests__/_test_helper\" --recursive --reporter spec",
     "autotest": "npm test -- --watch"
+  },
+  "dependencies": {
+    "true-case-path": "1.0.2"
   }
 }

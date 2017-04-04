@@ -1,4 +1,5 @@
 var path = require('path');
+var trueCasePathSync = require('true-case-path')
 
 // Check if this is a windows runtime or not
 var WIN = /^win/.test(process.platform);
@@ -62,6 +63,9 @@ var getResolveComponent = function(exts) {
           if (err || !stats.isFile()) {
             return tryToFindExtension(index + 1);
           }
+
+          componentFilePath = trueCasePathSync(componentFilePath)
+          componentFileName = componentFilePath.match(COMPONENT_ID_PATTERN)
 
           context.doResolve('file', {
             path: resolvePath,
