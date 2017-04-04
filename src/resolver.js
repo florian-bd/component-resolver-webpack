@@ -64,8 +64,9 @@ var getResolveComponent = function(exts) {
             return tryToFindExtension(index + 1);
           }
 
-          componentFilePath = trueCasePathSync(componentFilePath)
-          componentFileName = componentFilePath.match(COMPONENT_ID_PATTERN)
+          var fullPath = trueCasePathSync(componentFilePath)
+          resolvePath = fullPath.match(ENCLOSING_DIR_PATTERN)[1];
+          componentFileName = fullPath.match(COMPONENT_ID_PATTERN)[1]
 
           context.doResolve('file', {
             path: resolvePath,
